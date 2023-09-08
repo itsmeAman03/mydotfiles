@@ -204,3 +204,7 @@ gaps outer 5
 
 #picom 
 exec --no-startup-id picom 
+
+#brightness 
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10 # decrease screen brightness
