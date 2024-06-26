@@ -1,19 +1,19 @@
 # mydotfiles
 This repositry contain my all dotfiles of ricing in Endeavour OS based on Arch Linux .
-These are the modules you need to download to reconfig dot files 
-    - feh #background  wallpaper
-    - light #brightness
-    - i3 i3status 
-    - polybar #bar on the top
-    - jetbrains nerd font 
-    - picom #this is fork of compton which is used to adjust transparency of windows
-    - alacritty #terminal  
-    - rofi #menu manager
-    - fzf (Fuzzy Finder)
-    - kitty-terminal
-    - zsh ( zsh for terminal )
-    - oh-my-zsh (zsh config and theming)
-    - powerlevel10k
+These are the modules you need to download to reconfig dot files:- 
+   - feh #background  wallpaper
+   - light #brightness
+   - i3 i3status 
+   - polybar #bar on the top
+   - jetbrains nerd font 
+   - picom #this is fork of compton which is used to adjust transparency of windows
+   - alacritty #terminal  
+   - rofi #menu manager
+   - fzf (Fuzzy Finder)
+   - kitty-terminal
+   - zsh ( zsh for terminal )
+   - oh-my-zsh (zsh config and theming)
+   - powerlevel10k
 
 ## To activate light we need to do following steps:- 
 1. Install "light" module
