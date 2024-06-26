@@ -1,6 +1,6 @@
 # mydotfiles
-## This repositry contain my all dotfiles of ricing in Endeavour OS based on Arch Linux .
-## These are the modules you need to download to reconfig dot files 
+This repositry contain my all dotfiles of ricing in Endeavour OS based on Arch Linux .
+These are the modules you need to download to reconfig dot files 
     - feh #background  wallpaper
     - light #brightness
     - i3 i3status 
@@ -39,18 +39,16 @@
 ```bash
     exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 ```
-4. After the nvim config you need to install all plugins
-  - Go in Visual mode 
-  - Press Shift+: 
-  - Type Lazy anf then Enter
-
 ## Things to be noted:
- ### All these folder should be in $HOME/.config/
-
- ### Whenenve you edit your .zshrc file You need to reload it everytime 
+All these folder should be in $HOME/.config/
+Whenenve you edit your .zshrc file You need to reload it everytime 
     ```bash
         source $HOME/.zshrc
     ```
- ### You have to move .zshrc file to $HOME directory
- ### Custom folder should be in $ZSH_CUSTOM (i.e. $HOME/.oh-my-zsh/) directory 
+You have to move .zshrc file to $HOME directory
+Custom folder should be in $ZSH_CUSTOM (i.e. $HOME/.oh-my-zsh/) directory 
 
+After the nvim config you need to install all plugins
+  - Go in Visual mode 
+  - Press Shift+: 
+  - Type Lazy anf then Enter
