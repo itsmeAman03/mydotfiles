@@ -18,37 +18,37 @@ These are the modules you need to download to reconfig dot files:-
 ## To activate light we need to do following steps:- 
 1. Install "light" module
 ```bash
-    yay -S light
+yay -S light
 ```
 2. Run the following command:
 ```bash
-    sudo chmod +s /usr/bin/light
+sudo chmod +s /usr/bin/light
 ```
 3. add these lines in i3 config file 
 ```bash
-    bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5 # increase screen brightness
-    bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5 # decrease screen brightness
 ```
 ## To polybar to Launch.sh file work as executable 
 1. create launch.sh #included in repo 
 2. execute this cmd :-  
 ```bash
-    chmod +x $HOME/.config/polybar/launch.sh
+chmod +x $HOME/.config/polybar/launch.sh
 ```
 3. add this to i3 config :- 
 ```bash
-    exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 ```
 ## Things to be noted:
-All these folder should be in $HOME/.config/
-Whenenve you edit your .zshrc file You need to reload it everytime 
-    ```bash
-        source $HOME/.zshrc
-    ```
-You have to move .zshrc file to $HOME directory
-Custom folder should be in $ZSH_CUSTOM (i.e. $HOME/.oh-my-zsh/) directory 
+- All these folder should be in $HOME/.config/
+- Whenenve you edit your .zshrc file You need to reload it everytime 
+  ```bash
+    source $HOME/.zshrc
+  ```
+- You have to move .zshrc file to $HOME directory
+- Custom folder should be in $ZSH_CUSTOM (i.e. $HOME/.oh-my-zsh/) directory 
 
-After the nvim config you need to install all plugins
+- After the nvim config you need to install all plugins
   - Go in Visual mode 
   - Press Shift+: 
   - Type Lazy anf then Enter
