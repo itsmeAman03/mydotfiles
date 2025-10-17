@@ -12,7 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 
-require("lazy").setup("meister.plugins",{
+require("lazy").setup( {{ import = "meister.plugins"},{ import = "meister.plugins.lsp" } }, {
   checker = {
     enabled = true,
     notify = false,

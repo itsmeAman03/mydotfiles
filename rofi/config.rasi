@@ -1,83 +1,145 @@
 configuration {
-  display-drun: "Applications:";
-  display-window: "Windows:";
-  drun-display-format: "{icon} {name}";
-  font: "JetBrainsMono Nerd Font Medium 10";
-  show-icons: true;
-  modi: "window,run,drun";
+  display-drun:     "Application";
+  display-run:      "Execute";
+  display-window:   "Window";
+  display-filebrowser: "Files";
+  font:             "JetBrainsMono Nerd Font Medium 10";
+  show-icons:       true;
+  modes:            "window,drun,filebrowser,run";
 }
 
-@theme "/dev/null"
+@import "mocha"
 
 * {
-  bg: #1e1e2e66;
-  bg-alt: #585b7066;
-  bg-selected: #31324466;
+	background-color:               @base;
+	text-color:                     @text;
+	selbg:                          @lavender;
+	actbg:                          @base;
+	urgbg:                          @red;
+	winbg:			                @mauve;
 
-  fg: #cdd6f4;
-  fg-alt: #7f849c;
+	selected-normal-foreground:     @winbg;
+	normal-foreground:              @text-color;
+	selected-normal-background:     @actbg;
+	normal-background:              @background-color;
 
-  
-  border: 0;
-  margin: 0;
-  padding: 0;
-  spacing: 0;
+	selected-urgent-foreground:     @background-color;
+	urgent-foreground:              @text-color;
+	selected-urgent-background:     @urgbg;
+	urgent-background:              @background-color;
+
+	selected-active-foreground:     @winbg;
+	active-foreground:              @text-color;
+	selected-active-background:     @actbg;
+	active-background:              @selbg;
+
+	line-margin:                    2;
+	line-padding:                   2;
+	separator-style:                ":";
 }
 
 window {
-  width: 30%;
-  background-color: @bg;
-}
-
-element {
-  padding: 8 12;
-  background-color: transparent;
-  text-color: @fg-alt;
-}
-
-element selected {
-  text-color: @fg;
-  background-color: @bg-selected;
-}
-
-element-text {
-  background-color: transparent;
-  text-color: inherit;
-  vertical-align: 0.5;
-}
-
-element-icon {
-  size: 14;
-  padding: 0 10 0 0;
-  background-color: transparent;
-}
-
-entry {
-  padding: 12;
-  background-color: @bg-alt;
-  text-color: @fg;
-}
-
-inputbar {
-  children: [prompt, entry];
-  background-color: @bg;
-}
-
-listview {
-  background-color: @bg;
-  columns: 1;
-  lines: 10;
+    transparency:   "real";
+    location:       center;
+    anchor:         center;
+    padding:        0;
+    margin:         0;
+	width:		    700px;
+    border:         3px solid;
+    border-color:   @lavender;
+    border-radius:  9px;
+	children:	    [mainbox];    
 }
 
 mainbox {
-  children: [inputbar, listview];
-  background-color: @bg;
+	spacing:  0.7em;
+	children: [ mode-switcher,entry,listview ];
 }
 
-prompt {
-  enabled: true;
-  padding: 12 0 0 12;
-  background-color: @bg-alt;
-  text-color: @fg;
+button { padding: 5px 2px; }
+
+button selected {
+	background-color: @active-background;
+	text-color:       @background-color;
 }
 
+inputbar {
+	padding: 10px;
+	spacing: 5px;
+    margin:  5px 20px;
+    background-color: @base;
+    children:   [ "prompt","textbox-prompt-colon","entry","num-filtered-rows","textbox-num-sep","num-rows","case-indicator" ];
+}
+
+listview {
+    padding:      2px 0px 0px ;
+    scrollbar:    true;
+    border-color: @background-color;
+    spacing:      2px ;
+    fixed-height: 0;
+    border:       2px dash ;
+    border-radius: 0.1em;
+	cycle:   true;
+}
+scrollbar {
+    width:        4px ;
+    padding:      0;
+    handle-width: 8px ;
+    border:       0;
+    handle-color: @normal-foreground;
+}
+
+element { padding: 10px; }
+
+entry {
+	expand:         false;
+	text-color:     @normal-foreground;
+	padding:        5px;
+}
+
+element normal.normal {
+	background-color: @normal-background;
+	text-color:       @normal-foreground;
+}
+
+element normal.urgent {
+	background-color: @urgent-background;
+	text-color:       @urgent-foreground;
+}
+
+element normal.active {
+	background-color: @active-background;
+	text-color:       @active-foreground;
+}
+
+element selected.normal {
+	background-color: @selected-normal-background;
+	text-color:       @selected-normal-foreground;
+	border:           0.16em solid;
+	border-color:	  @active-background;
+}
+
+element selected.urgent {
+	background-color: @selected-urgent-background;
+	text-color:       @selected-urgent-foreground;
+}
+
+element selected.active {
+	background-color: @selected-active-background;
+	text-color:       @selected-active-foreground;
+}
+
+element alternate.normal {
+	background-color: @normal-background;
+	text-color:       @normal-foreground;
+}
+
+element alternate.urgent {
+	background-color: @urgent-background;
+	text-color:       @urgent-foreground;
+}
+
+element alternate.active {
+	background-color: @active-background;
+	text-color:       @active-foreground;
+}

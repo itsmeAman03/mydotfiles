@@ -46,6 +46,9 @@ return {
         "python",
         "rst",
         "toml",
+        "regex",
+
+
       },
       incremental_selection = {
         enable = true,

@@ -1,0 +1,38 @@
+{
+    "KPackageStructure": "Plasma/LookAndFeel",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "adolfo@librepixels.com",
+                "Name": "zayronxio"
+            }
+        ],
+        "Category": "",
+        "ServiceTypes": [
+            "Plasma/LookAndFeel"
+        ],
+        "Description": "",
+        "Id": "Modern.CatppuccinMocha.Flamingo",
+        "License": "GPLv3+",
+        "Name": "Modern Catppuccin Mocha Flamingo",
+        "Website": "https://store.kde.org/p/2279886/"
+        },
+        "X-KPackage-Dependencies": [
+        "kns://plasmoids.knsrc/api.kde-look.org/2238525",
+        "kns://colorschemes.knsrc/api.kde-look.org/1921998",
+        "kns://plasma-themes.knsrc/api.kde-look.org/2262407",
+        "kns://aurorae.knsrc/api.kde-look.org/2271791",
+        "kns://lookandfeel.knsrc/api.kde-look.org/2220545",
+        "kns://xcursor.knsrc/api.kde-look.org/2083798",
+        "kns://wallpaper.knsrc/api.kde-look.org/2279885",
+        "kns://wallpaper.knsrc/api.kde-look.org/2286299",
+        "kns://wallpaper.knsrc/api.kde-look.org/2283815",
+        "kns://icons.knsrc/api.kde-look.org/2239645",
+        "kns://plasmoids.knsrc/api.kde-look.org/2179317",
+        "kns://plasmoids.knsrc/api.kde-look.org/2230382",
+        "kns://plasmoids.knsrc/api.kde-look.org/2130967",
+        "kns://plasmoids.knsrc/api.kde-look.org/2272210",
+        "kns://wallpaper.knsrc/api.kde-look.org/2283815",
+        "kns://sddmtheme.knsrc/api.kde-look.org/2221986"
+         ]
+}

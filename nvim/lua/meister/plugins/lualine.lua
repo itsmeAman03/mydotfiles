@@ -52,7 +52,8 @@ return {
     -- configure lualine with modified theme
     lualine.setup({
       options = {
-        theme = my_lualine_theme,
+        --theme = my_lualine_theme,
+        theme = 'moonfly' --setting moonfly theme instead of custom
       },
       sections = {
         lualine_x = {
